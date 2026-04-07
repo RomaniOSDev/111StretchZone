@@ -3,33 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		746A209D2F854DD80076A047 /* BodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A205A2F854DD80076A047 /* BodyPart.swift */; };
+		746A209E2F854DD80076A047 /* FlexibilityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A205B2F854DD80076A047 /* FlexibilityLevel.swift */; };
+		746A209F2F854DD80076A047 /* StretchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A205C2F854DD80076A047 /* StretchType.swift */; };
+		746A20A02F854DD80076A047 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A205E2F854DD80076A047 /* Achievement.swift */; };
+		746A20A12F854DD80076A047 /* FlexibilityMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A205F2F854DD80076A047 /* FlexibilityMetric.swift */; };
+		746A20A22F854DD80076A047 /* StretchExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20602F854DD80076A047 /* StretchExercise.swift */; };
+		746A20A32F854DD80076A047 /* StretchExerciseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20612F854DD80076A047 /* StretchExerciseEntry.swift */; };
+		746A20A42F854DD80076A047 /* StretchGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20622F854DD80076A047 /* StretchGoal.swift */; };
+		746A20A52F854DD80076A047 /* StretchRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20632F854DD80076A047 /* StretchRecord.swift */; };
+		746A20A62F854DD80076A047 /* StretchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20642F854DD80076A047 /* StretchSession.swift */; };
+		746A20A72F854DD80076A047 /* StretchTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20652F854DD80076A047 /* StretchTemplate.swift */; };
+		746A20A82F854DD80076A047 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20682F854DD80076A047 /* AchievementsView.swift */; };
+		746A20A92F854DD80076A047 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A206A2F854DD80076A047 /* DashboardView.swift */; };
+		746A20AA2F854DD80076A047 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A206C2F854DD80076A047 /* AddExerciseView.swift */; };
+		746A20AB2F854DD80076A047 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A206D2F854DD80076A047 /* ExercisesView.swift */; };
+		746A20AC2F854DD80076A047 /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A206F2F854DD80076A047 /* AddGoalView.swift */; };
+		746A20AD2F854DD80076A047 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20702F854DD80076A047 /* GoalsView.swift */; };
+		746A20AE2F854DD80076A047 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20722F854DD80076A047 /* HomeView.swift */; };
+		746A20AF2F854DD80076A047 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20742F854DD80076A047 /* OnboardingView.swift */; };
+		746A20B02F854DD80076A047 /* ProgressScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20762F854DD80076A047 /* ProgressScreenView.swift */; };
+		746A20B12F854DD80076A047 /* AddSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20782F854DD80076A047 /* AddSessionView.swift */; };
+		746A20B22F854DD80076A047 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A207A2F854DD80076A047 /* SettingsView.swift */; };
+		746A20B32F854DD80076A047 /* CreateTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A207C2F854DD80076A047 /* CreateTemplateView.swift */; };
+		746A20B42F854DD80076A047 /* TemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A207D2F854DD80076A047 /* TemplatesView.swift */; };
+		746A20B52F854DD80076A047 /* AchievementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20802F854DD80076A047 /* AchievementCard.swift */; };
+		746A20B62F854DD80076A047 /* ExerciseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20812F854DD80076A047 /* ExerciseCard.swift */; };
+		746A20B72F854DD80076A047 /* FilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20822F854DD80076A047 /* FilterChip.swift */; };
+		746A20B82F854DD80076A047 /* FlexibilityRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20832F854DD80076A047 /* FlexibilityRing.swift */; };
+		746A20B92F854DD80076A047 /* GoalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20842F854DD80076A047 /* GoalCard.swift */; };
+		746A20BA2F854DD80076A047 /* SessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20852F854DD80076A047 /* SessionCard.swift */; };
+		746A20BB2F854DD80076A047 /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20862F854DD80076A047 /* StatCard.swift */; };
+		746A20BC2F854DD80076A047 /* TemplateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20872F854DD80076A047 /* TemplateCard.swift */; };
+		746A20BD2F854DD80076A047 /* Color+Stretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20892F854DD80076A047 /* Color+Stretch.swift */; };
+		746A20BE2F854DD80076A047 /* StretchDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A208A2F854DD80076A047 /* StretchDesign.swift */; };
+		746A20BF2F854DD80076A047 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A208C2F854DD80076A047 /* AppLinks.swift */; };
+		746A20C02F854DD80076A047 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A208D2F854DD80076A047 /* DateFormatting.swift */; };
+		746A20C12F854DD80076A047 /* StretchZoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20902F854DD80076A047 /* StretchZoneViewModel.swift */; };
+		746A20C22F854DD80076A047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20922F854DD80076A047 /* AppDelegate.swift */; };
+		746A20C32F854DD80076A047 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A20942F854DD80076A047 /* ContentView.swift */; };
+		746A20C42F854DD80076A047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A209A2F854DD80076A047 /* SceneDelegate.swift */; };
+		746A20C52F854DD80076A047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A209B2F854DD80076A047 /* ViewController.swift */; };
+		746A20C62F854DD80076A047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746A20932F854DD80076A047 /* Assets.xcassets */; };
+		746A20C82F854DD80076A047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746A20972F854DD80076A047 /* LaunchScreen.storyboard */; };
+		746A20C92F854DD80076A047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746A20992F854DD80076A047 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4E0938B0A9864E82B7404AF5 /* Pods_111StretchZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_111StretchZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		628B3FAED7D2B24FC3E6DC9D /* Pods-111StretchZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-111StretchZone.debug.xcconfig"; path = "Target Support Files/Pods-111StretchZone/Pods-111StretchZone.debug.xcconfig"; sourceTree = "<group>"; };
+		746A205A2F854DD80076A047 /* BodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPart.swift; sourceTree = "<group>"; };
+		746A205B2F854DD80076A047 /* FlexibilityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibilityLevel.swift; sourceTree = "<group>"; };
+		746A205C2F854DD80076A047 /* StretchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchType.swift; sourceTree = "<group>"; };
+		746A205E2F854DD80076A047 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		746A205F2F854DD80076A047 /* FlexibilityMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibilityMetric.swift; sourceTree = "<group>"; };
+		746A20602F854DD80076A047 /* StretchExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExercise.swift; sourceTree = "<group>"; };
+		746A20612F854DD80076A047 /* StretchExerciseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExerciseEntry.swift; sourceTree = "<group>"; };
+		746A20622F854DD80076A047 /* StretchGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchGoal.swift; sourceTree = "<group>"; };
+		746A20632F854DD80076A047 /* StretchRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchRecord.swift; sourceTree = "<group>"; };
+		746A20642F854DD80076A047 /* StretchSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchSession.swift; sourceTree = "<group>"; };
+		746A20652F854DD80076A047 /* StretchTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchTemplate.swift; sourceTree = "<group>"; };
+		746A20682F854DD80076A047 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		746A206A2F854DD80076A047 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		746A206C2F854DD80076A047 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		746A206D2F854DD80076A047 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		746A206F2F854DD80076A047 /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		746A20702F854DD80076A047 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		746A20722F854DD80076A047 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		746A20742F854DD80076A047 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		746A20762F854DD80076A047 /* ProgressScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressScreenView.swift; sourceTree = "<group>"; };
+		746A20782F854DD80076A047 /* AddSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionView.swift; sourceTree = "<group>"; };
+		746A207A2F854DD80076A047 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		746A207C2F854DD80076A047 /* CreateTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTemplateView.swift; sourceTree = "<group>"; };
+		746A207D2F854DD80076A047 /* TemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesView.swift; sourceTree = "<group>"; };
+		746A20802F854DD80076A047 /* AchievementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCard.swift; sourceTree = "<group>"; };
+		746A20812F854DD80076A047 /* ExerciseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCard.swift; sourceTree = "<group>"; };
+		746A20822F854DD80076A047 /* FilterChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChip.swift; sourceTree = "<group>"; };
+		746A20832F854DD80076A047 /* FlexibilityRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibilityRing.swift; sourceTree = "<group>"; };
+		746A20842F854DD80076A047 /* GoalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCard.swift; sourceTree = "<group>"; };
+		746A20852F854DD80076A047 /* SessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCard.swift; sourceTree = "<group>"; };
+		746A20862F854DD80076A047 /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		746A20872F854DD80076A047 /* TemplateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCard.swift; sourceTree = "<group>"; };
+		746A20892F854DD80076A047 /* Color+Stretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Stretch.swift"; sourceTree = "<group>"; };
+		746A208A2F854DD80076A047 /* StretchDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchDesign.swift; sourceTree = "<group>"; };
+		746A208C2F854DD80076A047 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
+		746A208D2F854DD80076A047 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
+		746A20902F854DD80076A047 /* StretchZoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchZoneViewModel.swift; sourceTree = "<group>"; };
+		746A20922F854DD80076A047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		746A20932F854DD80076A047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		746A20942F854DD80076A047 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		746A20952F854DD80076A047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746A20962F854DD80076A047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		746A20982F854DD80076A047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		746A209A2F854DD80076A047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		746A209B2F854DD80076A047 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		746AE6272F7E6F340076A047 /* 111StretchZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 111StretchZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F084CBF520F34CC625F6F605 /* Pods-111StretchZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-111StretchZone.release.xcconfig"; path = "Target Support Files/Pods-111StretchZone/Pods-111StretchZone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		746AE6392F7E6F360076A047 /* Exceptions for "111StretchZone" folder in "111StretchZone" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 746AE6262F7E6F340076A047 /* 111StretchZone */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		746AE6292F7E6F340076A047 /* 111StretchZone */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				746AE6392F7E6F360076A047 /* Exceptions for "111StretchZone" folder in "111StretchZone" target */,
-			);
-			path = 111StretchZone;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		746AE6242F7E6F340076A047 /* Frameworks */ = {
@@ -42,11 +116,217 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		746A205D2F854DD80076A047 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				746A205A2F854DD80076A047 /* BodyPart.swift */,
+				746A205B2F854DD80076A047 /* FlexibilityLevel.swift */,
+				746A205C2F854DD80076A047 /* StretchType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		746A20662F854DD80076A047 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				746A205E2F854DD80076A047 /* Achievement.swift */,
+				746A205F2F854DD80076A047 /* FlexibilityMetric.swift */,
+				746A20602F854DD80076A047 /* StretchExercise.swift */,
+				746A20612F854DD80076A047 /* StretchExerciseEntry.swift */,
+				746A20622F854DD80076A047 /* StretchGoal.swift */,
+				746A20632F854DD80076A047 /* StretchRecord.swift */,
+				746A20642F854DD80076A047 /* StretchSession.swift */,
+				746A20652F854DD80076A047 /* StretchTemplate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		746A20672F854DD80076A047 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				746A205D2F854DD80076A047 /* Enums */,
+				746A20662F854DD80076A047 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		746A20692F854DD80076A047 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				746A20682F854DD80076A047 /* AchievementsView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		746A206B2F854DD80076A047 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				746A206A2F854DD80076A047 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		746A206E2F854DD80076A047 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				746A206C2F854DD80076A047 /* AddExerciseView.swift */,
+				746A206D2F854DD80076A047 /* ExercisesView.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		746A20712F854DD80076A047 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				746A206F2F854DD80076A047 /* AddGoalView.swift */,
+				746A20702F854DD80076A047 /* GoalsView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		746A20732F854DD80076A047 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				746A20722F854DD80076A047 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		746A20752F854DD80076A047 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				746A20742F854DD80076A047 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		746A20772F854DD80076A047 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				746A20762F854DD80076A047 /* ProgressScreenView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		746A20792F854DD80076A047 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				746A20782F854DD80076A047 /* AddSessionView.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		746A207B2F854DD80076A047 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				746A207A2F854DD80076A047 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		746A207E2F854DD80076A047 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				746A207C2F854DD80076A047 /* CreateTemplateView.swift */,
+				746A207D2F854DD80076A047 /* TemplatesView.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		746A207F2F854DD80076A047 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				746A20692F854DD80076A047 /* Achievements */,
+				746A206B2F854DD80076A047 /* Dashboard */,
+				746A206E2F854DD80076A047 /* Exercises */,
+				746A20712F854DD80076A047 /* Goals */,
+				746A20732F854DD80076A047 /* Home */,
+				746A20752F854DD80076A047 /* Onboarding */,
+				746A20772F854DD80076A047 /* Progress */,
+				746A20792F854DD80076A047 /* Sessions */,
+				746A207B2F854DD80076A047 /* Settings */,
+				746A207E2F854DD80076A047 /* Templates */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		746A20882F854DD80076A047 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				746A20802F854DD80076A047 /* AchievementCard.swift */,
+				746A20812F854DD80076A047 /* ExerciseCard.swift */,
+				746A20822F854DD80076A047 /* FilterChip.swift */,
+				746A20832F854DD80076A047 /* FlexibilityRing.swift */,
+				746A20842F854DD80076A047 /* GoalCard.swift */,
+				746A20852F854DD80076A047 /* SessionCard.swift */,
+				746A20862F854DD80076A047 /* StatCard.swift */,
+				746A20872F854DD80076A047 /* TemplateCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		746A208B2F854DD80076A047 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				746A20892F854DD80076A047 /* Color+Stretch.swift */,
+				746A208A2F854DD80076A047 /* StretchDesign.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		746A208E2F854DD80076A047 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				746A208C2F854DD80076A047 /* AppLinks.swift */,
+				746A208D2F854DD80076A047 /* DateFormatting.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		746A208F2F854DD80076A047 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				746A20882F854DD80076A047 /* Components */,
+				746A208B2F854DD80076A047 /* Styles */,
+				746A208E2F854DD80076A047 /* Utils */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		746A20912F854DD80076A047 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				746A20902F854DD80076A047 /* StretchZoneViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		746A209C2F854DD80076A047 /* 111StretchZone */ = {
+			isa = PBXGroup;
+			children = (
+				746A20672F854DD80076A047 /* Domain */,
+				746A207F2F854DD80076A047 /* Features */,
+				746A208F2F854DD80076A047 /* Shared */,
+				746A20912F854DD80076A047 /* ViewModels */,
+				746A20922F854DD80076A047 /* AppDelegate.swift */,
+				746A20932F854DD80076A047 /* Assets.xcassets */,
+				746A20942F854DD80076A047 /* ContentView.swift */,
+				746A20952F854DD80076A047 /* Info.plist */,
+				746A20972F854DD80076A047 /* LaunchScreen.storyboard */,
+				746A20992F854DD80076A047 /* Main.storyboard */,
+				746A209A2F854DD80076A047 /* SceneDelegate.swift */,
+				746A209B2F854DD80076A047 /* ViewController.swift */,
+			);
+			path = 111StretchZone;
+			sourceTree = "<group>";
+		};
 		746AE61E2F7E6F340076A047 = {
 			isa = PBXGroup;
 			children = (
-				746AE6292F7E6F340076A047 /* 111StretchZone */,
+				746A209C2F854DD80076A047 /* 111StretchZone */,
 				746AE6282F7E6F340076A047 /* Products */,
+				ABB0450BEC58A8699EF007FF /* Pods */,
+				DDC11275C2FAE7EC44B797B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +338,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		ABB0450BEC58A8699EF007FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				628B3FAED7D2B24FC3E6DC9D /* Pods-111StretchZone.debug.xcconfig */,
+				F084CBF520F34CC625F6F605 /* Pods-111StretchZone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDC11275C2FAE7EC44B797B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E0938B0A9864E82B7404AF5 /* Pods_111StretchZone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 746AE63A2F7E6F360076A047 /* Build configuration list for PBXNativeTarget "111StretchZone" */;
 			buildPhases = (
+				C9F3C9C61FB7BF211E5D5476 /* [CP] Check Pods Manifest.lock */,
 				746AE6232F7E6F340076A047 /* Sources */,
 				746AE6242F7E6F340076A047 /* Frameworks */,
 				746AE6252F7E6F340076A047 /* Resources */,
@@ -73,12 +371,7 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				746AE6292F7E6F340076A047 /* 111StretchZone */,
-			);
 			name = 111StretchZone;
-			packageProductDependencies = (
-			);
 			productName = 111StretchZone;
 			productReference = 746AE6272F7E6F340076A047 /* 111StretchZone.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +392,7 @@
 				};
 			};
 			buildConfigurationList = 746AE6222F7E6F340076A047 /* Build configuration list for PBXProject "111StretchZone" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +400,6 @@
 				Base,
 			);
 			mainGroup = 746AE61E2F7E6F340076A047;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 746AE6282F7E6F340076A047 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,24 +414,113 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746A20C62F854DD80076A047 /* Assets.xcassets in Resources */,
+				746A20C82F854DD80076A047 /* LaunchScreen.storyboard in Resources */,
+				746A20C92F854DD80076A047 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9F3C9C61FB7BF211E5D5476 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-111StretchZone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		746AE6232F7E6F340076A047 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746A209D2F854DD80076A047 /* BodyPart.swift in Sources */,
+				746A209E2F854DD80076A047 /* FlexibilityLevel.swift in Sources */,
+				746A209F2F854DD80076A047 /* StretchType.swift in Sources */,
+				746A20A02F854DD80076A047 /* Achievement.swift in Sources */,
+				746A20A12F854DD80076A047 /* FlexibilityMetric.swift in Sources */,
+				746A20A22F854DD80076A047 /* StretchExercise.swift in Sources */,
+				746A20A32F854DD80076A047 /* StretchExerciseEntry.swift in Sources */,
+				746A20A42F854DD80076A047 /* StretchGoal.swift in Sources */,
+				746A20A52F854DD80076A047 /* StretchRecord.swift in Sources */,
+				746A20A62F854DD80076A047 /* StretchSession.swift in Sources */,
+				746A20A72F854DD80076A047 /* StretchTemplate.swift in Sources */,
+				746A20A82F854DD80076A047 /* AchievementsView.swift in Sources */,
+				746A20A92F854DD80076A047 /* DashboardView.swift in Sources */,
+				746A20AA2F854DD80076A047 /* AddExerciseView.swift in Sources */,
+				746A20AB2F854DD80076A047 /* ExercisesView.swift in Sources */,
+				746A20AC2F854DD80076A047 /* AddGoalView.swift in Sources */,
+				746A20AD2F854DD80076A047 /* GoalsView.swift in Sources */,
+				746A20AE2F854DD80076A047 /* HomeView.swift in Sources */,
+				746A20AF2F854DD80076A047 /* OnboardingView.swift in Sources */,
+				746A20B02F854DD80076A047 /* ProgressScreenView.swift in Sources */,
+				746A20B12F854DD80076A047 /* AddSessionView.swift in Sources */,
+				746A20B22F854DD80076A047 /* SettingsView.swift in Sources */,
+				746A20B32F854DD80076A047 /* CreateTemplateView.swift in Sources */,
+				746A20B42F854DD80076A047 /* TemplatesView.swift in Sources */,
+				746A20B52F854DD80076A047 /* AchievementCard.swift in Sources */,
+				746A20B62F854DD80076A047 /* ExerciseCard.swift in Sources */,
+				746A20B72F854DD80076A047 /* FilterChip.swift in Sources */,
+				746A20B82F854DD80076A047 /* FlexibilityRing.swift in Sources */,
+				746A20B92F854DD80076A047 /* GoalCard.swift in Sources */,
+				746A20BA2F854DD80076A047 /* SessionCard.swift in Sources */,
+				746A20BB2F854DD80076A047 /* StatCard.swift in Sources */,
+				746A20BC2F854DD80076A047 /* TemplateCard.swift in Sources */,
+				746A20BD2F854DD80076A047 /* Color+Stretch.swift in Sources */,
+				746A20BE2F854DD80076A047 /* StretchDesign.swift in Sources */,
+				746A20BF2F854DD80076A047 /* AppLinks.swift in Sources */,
+				746A20C02F854DD80076A047 /* DateFormatting.swift in Sources */,
+				746A20C12F854DD80076A047 /* StretchZoneViewModel.swift in Sources */,
+				746A20C22F854DD80076A047 /* AppDelegate.swift in Sources */,
+				746A20C32F854DD80076A047 /* ContentView.swift in Sources */,
+				746A20C42F854DD80076A047 /* SceneDelegate.swift in Sources */,
+				746A20C52F854DD80076A047 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		746A20972F854DD80076A047 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				746A20962F854DD80076A047 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		746A20992F854DD80076A047 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				746A20982F854DD80076A047 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		746AE63B2F7E6F360076A047 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628B3FAED7D2B24FC3E6DC9D /* Pods-111StretchZone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -147,30 +528,37 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 111StretchZone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "StretchZone: Best results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.-11StretchZone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yor.str3tchz0n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		746AE63C2F7E6F360076A047 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F084CBF520F34CC625F6F605 /* Pods-111StretchZone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -178,25 +566,31 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 111StretchZone/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "StretchZone: Best results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.-11StretchZone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yor.str3tchz0n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

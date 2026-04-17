@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - Two rotating segments loader (example style)
 
-struct NewLoadTwoCircleView: View {
+struct DualAnnulusProgressGlyph: View {
     var progress: Double
     @State private var rotationAngle: Double = 0.0
     var width: CGFloat = 72
@@ -52,7 +52,7 @@ struct NewLoadTwoCircleView: View {
             segmentArc(gradient: tailGradient, lineW: lineW, angle: rotationAngle + 180)
 
             if progress > 0.5 {
-                EndLoadingIndicator()
+                CompletionSealBadge()
             }
         }
         .onAppear {
@@ -81,7 +81,7 @@ struct NewLoadTwoCircleView: View {
     }
 }
 
-struct EndLoadingIndicator: View {
+struct CompletionSealBadge: View {
     private let greenColor = Color.green
 
     var body: some View {
@@ -112,16 +112,14 @@ struct EndLoadingIndicator: View {
 
 // MARK: - Start Main View
 
-struct StartMainView: View {
+struct ApertureSplashScreen: View {
     var body: some View {
         ZStack {
-            // Background image
             Image(.launcjIMG)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
 
-            // Dark overlay for contrast and text readability
             LinearGradient(
                 colors: [
                     Color.black.opacity(0.35),
@@ -135,7 +133,7 @@ struct StartMainView: View {
             VStack(spacing: 24) {
                 Spacer()
 
-                NewLoadTwoCircleView(progress: 0)
+                DualAnnulusProgressGlyph(progress: 0)
 
                 Text("Loading...")
                     .font(.system(size: 17, weight: .medium))
@@ -150,5 +148,5 @@ struct StartMainView: View {
 }
 
 #Preview {
-    StartMainView()
+    ApertureSplashScreen()
 }

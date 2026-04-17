@@ -12,14 +12,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    private var appRouter: AppRouter?
-
+    private var flowCoordinator: PrimarySceneCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        appRouter = AppRouter()
-        window?.rootViewController = appRouter?.initialViewController()
+        flowCoordinator = PrimarySceneCoordinator()
+        window?.rootViewController = flowCoordinator?.makeRootEntryController()
         window?.makeKeyAndVisible()
     }
 

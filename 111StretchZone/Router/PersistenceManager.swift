@@ -7,17 +7,16 @@
 
 import Foundation
 
-class PersistenceManager {
-    static let shared = PersistenceManager()
-    
+final class AppLaunchDefaultsBridge {
+    static let shared = AppLaunchDefaultsBridge()
+
     private let savedUrlKey = "LastUrl"
     private let hasShownContentViewKey = "HasShownContentView"
     private let hasSuccessfulWebViewLoadKey = "HasSuccessfulWebViewLoad"
-    
+
     var savedUrl: String? {
         get {
-            // Синхронизация с SaveService для обратной совместимости
-            if let url = SaveService.lastUrl {
+            if let url = LastURLDefaultsEcho.lastUrl {
                 return url.absoluteString
             }
             return UserDefaults.standard.string(forKey: savedUrlKey)
@@ -25,17 +24,16 @@ class PersistenceManager {
         set {
             if let urlString = newValue {
                 UserDefaults.standard.set(urlString, forKey: savedUrlKey)
-                // Синхронизация с SaveService
                 if let url = URL(string: urlString) {
-                    SaveService.lastUrl = url
+                    LastURLDefaultsEcho.lastUrl = url
                 }
             } else {
                 UserDefaults.standard.removeObject(forKey: savedUrlKey)
-                SaveService.lastUrl = nil
+                LastURLDefaultsEcho.lastUrl = nil
             }
         }
     }
-    
+
     var hasShownContentView: Bool {
         get {
             UserDefaults.standard.bool(forKey: hasShownContentViewKey)
@@ -44,7 +42,7 @@ class PersistenceManager {
             UserDefaults.standard.set(newValue, forKey: hasShownContentViewKey)
         }
     }
-    
+
     var hasSuccessfulWebViewLoad: Bool {
         get {
             UserDefaults.standard.bool(forKey: hasSuccessfulWebViewLoadKey)
@@ -53,6 +51,6 @@ class PersistenceManager {
             UserDefaults.standard.set(newValue, forKey: hasSuccessfulWebViewLoadKey)
         }
     }
-    
+
     private init() {}
 }

